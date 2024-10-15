@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Submit Page </title>
+        <style>
+        .website-heading 
+        {
+         color: rgb(107, 36, 127);
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         font-weight: bold;
+         font-size: 45px;
+         text-align: center;
+         margin-bottom: 10px;
+        }
+        .review-heading
+        {
+        font-size: 35px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+        color: rgb(70, 15, 81);
+        margin-bottom:  10px;
+        text-align: center  ;
+        }
+        .question
+        {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(70, 15, 81);
+            font-size: 19px;
+            margin-left: 100px;
+            margin-bottom: 6.5px;
+            margin-right: 20px;
+        }
+        .answer
+        {
+         margin-left: 50px;
+         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         font-size: 15px;
+         color: rgb(70, 15, 81);
+         width: 600px;
+          word-wrap:break-word;
+        }
+
+        .bottom-button
+            {
+              background-color: rgb(100, 52, 100);
+              width: 220px;
+              height: 30px;
+              color:white; 
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              font-size: 20px;
+              border-radius: 25px; 
+              margin-top: 5px;
+              margin-left: 600px; 
+              
+            }
+        </style>
+     </head>
+
+    <body>
+        <div class="website-heading "> Everything Culture </div>
+        <div class="review-heading"> Submit your review</div>
+        <form>
+            <div class="question">
+                <label  for="company"> 1. Company Name :</label>
+                <input class="answer" type="text" name ="company" id="company" required>
+            </div>
+            <div class="question" >
+                <label for="location"> 2. Job Location : </label>
+                <input class="answer" type="text" name ="company" id="company" required>
+            </div>
+            <div class="question" >
+                <label for="department"> 3. Department Name : </label>
+                <input class="answer" type="text" name ="department" id="department" required>
+            </div>
+            <div class="question" >
+                <label for="team"> 4. Team Name : </label>
+                <input class="answer" type="text" name ="team" id="team" required>
+            </div>
+            <div class="question" >
+                <label for="role"> 5. Job Role : </label>
+                <input class="answer" type="text" name ="role" id="role" required>
+            </div>
+            <div class="question" >
+                <label for="tenure"> 6. Job Tenure (in months) :</label>
+                <input class="answer" type="number" name ="tenure" id="tenure" required>
+            </div>
+            <div class="question" >
+                <label for="lastmonth"> 7. Last working month :</label>
+                <input class="answer" type="month" name ="lastmonth" id="lastmonth">
+            </div>
+            <div class="question" >
+                <label for="manager"> 8. Manager Name (Optional) : </label>
+                <input class="answer" type="text" name ="manager" id="manager">
+            </div>
+            <div class="question"> 9. Rate your experience on following parameters : </div>
+                <div class="question"><li style="margin-left: 100px;"> Quality of work :
+                    <label style = "margin-left:20px;" for="good"> Good </label>
+                    <input type="radio" name ="worklifebalance" id="good" required>
+                    <label for="good"> Average </label>
+                    <input type="radio" name ="worklifebalance" id="average" required>
+                    <label for="good"> Bad </label>
+                    <input type="radio" name ="worklifebalance" id="good"required>
+                </li>
+                </div>
+                <div class="question"> <li style="margin-left: 100px;">Work life balance :
+                    <label style = "margin-left:20px;" for="good"> Good </label>
+                    <input type="radio" name ="worklifebalance" id="good" required>
+                    <label for="good"> Average </label>
+                    <input type="radio" name ="worklifebalance" id="average" required>
+                    <label for="good"> Bad </label>
+                    <input type="radio" name ="worklifebalance" id="good"required>
+                </li> 
+                </div>
+                <div class="question"> <li style="margin-left: 100px;"> Growth and learning :
+                    <label style = "margin-left:20px;" for="good"> Good </label>
+                    <input type="radio" name ="growth" id="good" required>
+                    <label for="good"> Average </label>
+                    <input type="radio" name ="growth" id="average" required>
+                    <label for="good"> Bad </label>
+                    <input type="radio" name ="growth" id="good" required>
+                </li>
+                </div>
+                <div class="question"> <li style="margin-left: 100px;"> Appraisal ratings :
+                    <label style = "margin-left:20px;" for="good"> Good </label>
+                    <input type="radio" name ="appraisal" id="good" required>
+                    <label for="good"> Average </label>
+                    <input type="radio" name ="appraisal" id="average" required>
+                    <label for="good"> Bad </label>
+                    <input type="radio" name ="appraisal" id="good" required>
+                </li>    
+                </div>
+                <div class="question"> <li style="margin-left: 100px;"> Experience with your manager :
+                    <label style = "margin-left:20px;" for="good"> Good </label>
+                    <input type="radio" name ="managerexp" id="good" required>
+                    <label for="good"> Average </label>
+                    <input type="radio" name ="managerexp" id="average" required>
+                    <label for="good"> Bad </label>
+                    <input type="radio" name ="managerexp" id="good" required>
+                </li>
+                </div>
+                <div class="question"> <li style="margin-left: 100px;"> Experience with your team :
+                    <label style = "margin-left:20px;" for="good"> Good </label>
+                    <input type="radio" name ="teamexp" id="good" required>
+                    <label for="good"> Average </label>
+                    <input type="radio" name ="teamexp" id="average" required>
+                    <label for="good"> Bad </label>
+                    <input type="radio" name ="teamexp" id="good" required>
+                </li>
+                </div>
+                <div class="question"> <li style="margin-left: 100px;"> Overall experience : 
+                    <label style = "margin-left:20px;" for="good"> Good </label>
+                    <input type="radio" name ="overallexp" id="good" required>
+                    <label for="good"> Average </label>
+                    <input type="radio" name ="overallexp" id="average" required>
+                    <label for="good"> Bad </label>
+                    <input type="radio" name ="overallexp" id="good" required>
+                </li>
+                </div>
+            <div>
+            <div class="question"> 10.  Did you experience any toxicity with your manager?
+                    <label style = "margin-left:20px;" for="yes"> Yes </label>
+                    <input type="radio" name ="managertoxicity" id="yes" required>
+                    <label for="no"> No</label>
+                    <input type="radio" name ="managertoxicity" id="no" required>
+            </div>
+            <div class="question"> 11. Did you experience any toxicity with your team?
+                <label style = "margin-left:20px;" for="yes"> Yes </label>
+                <input type="radio" name ="teamtoxicity" id="yes"required>
+                <label for="no"> No</label>
+                <input type="radio" name ="teamtoxicity" id="no" required>
+            </div>
+            <div class="question"> 12. Share your experience in details :
+                
+                <textarea class="answer" style="width:950px; height:80px; margin-left:30px; text-align:left;" maxlength=2500  name ="experiencedetails" id="experiencedetails" required> </textarea>
+            </div>
+            <div class="question" >
+                <label for="email"> 13. Email ID (If you want to receive updates on your review) :</label>
+                <input class="answer" type="email" name ="email" id="email">
+            </div>
+                <button class="bottom-button"> Submit my review </button>
+            </div>
+        </form>
+    </body>
+
+</html>
