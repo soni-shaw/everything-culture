@@ -59,7 +59,7 @@
     <body>
         <div class="website-heading "> Everything Culture </div>
         <div class="review-heading"> Submit your review</div>
-        <form>
+        <form action="results.html" method="GET">
             <div class="question">
                 <label  for="company"> 1. Company Name :</label>
                 <input class="answer" type="text" name ="company" id="company" required>
@@ -84,10 +84,17 @@
                 <label for="tenure"> 6. Job Tenure (in months) :</label>
                 <input class="answer" type="number" name ="tenure" id="tenure" required>
             </div>
-            <div class="question" >
-                <label for="lastmonth"> 7. Last working month :</label>
-                <input class="answer" type="month" name ="lastmonth" id="lastmonth">
+            <div class="question" > 7. Last worked with the team :
+                <label style = "margin-left:20px;" for="7a"> In last 3 months </label>
+                <input type="radio" name ="lastmonth" id="7a"required>
+                <label for="7b"> 3 months ago</label>
+                <input type="radio" name ="lastmonth" id="7b" required>
+                <label for="7c"> 6 months ago </label>
+                <input type="radio" name ="lastmonth" id="7c" required>
+                <label for="7d"> 1 year ago</label>
+                <input type="radio" name ="lastmonth" id="7d" required>
             </div>
+            
             <div class="question" >
                 <label for="manager"> 8. Manager Name (Optional) : </label>
                 <input class="answer" type="text" name ="manager" id="manager">
