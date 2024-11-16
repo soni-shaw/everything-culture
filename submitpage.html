@@ -50,23 +50,24 @@
               font-size: 20px;
               border-radius: 25px; 
               margin-top: 5px;
-              margin-left: 600px; 
-              
+              margin-left: 600px;
+
             }
+              
         </style>
      </head>
 
     <body>
         <div class="website-heading "> Everything Culture </div>
         <div class="review-heading"> Submit your review</div>
-        <form action="results.html" method="GET">
+        <form action="submit_form.php" method="POST">
             <div class="question">
                 <label  for="company"> 1. Company Name :</label>
                 <input class="answer" type="text" name ="company" id="company" required>
             </div>
             <div class="question" >
                 <label for="location"> 2. Job Location : </label>
-                <input class="answer" type="text" name ="company" id="company" required>
+                <input class="answer" type="text" name ="location" id="location" required>
             </div>
             <div class="question" >
                 <label for="department"> 3. Department Name : </label>
@@ -84,107 +85,108 @@
                 <label for="tenure"> 6. Job Tenure (in months) :</label>
                 <input class="answer" type="number" name ="tenure" id="tenure" required>
             </div>
-            <div class="question" > 7. Last worked with the team :
-                <label style = "margin-left:20px;" for="7a"> In last 3 months </label>
-                <input type="radio" name ="lastmonth" id="7a"required>
-                <label for="7b"> 3 months ago</label>
-                <input type="radio" name ="lastmonth" id="7b" required>
-                <label for="7c"> 6 months ago </label>
-                <input type="radio" name ="lastmonth" id="7c" required>
-                <label for="7d"> 1 year ago</label>
-                <input type="radio" name ="lastmonth" id="7d" required>
+            <div class="question">7. Last worked with the team:
+                <label style="margin-left:20px;" for="last3months">In last 3 months</label>
+                <input type="radio" name="lastworked" id="last3months" value="last3months" required>
+                <label for="3monthsago">3 months ago</label>
+                <input type="radio" name="lastworked" id="3monthsago" value="3monthsago" required>
+                <label for="6monthsago">6 months ago</label>
+                <input type="radio" name="lastworked" id="6monthsago" value="6monthsago" required>
+                <label for="1yearago">1 year ago</label>
+                <input type="radio" name="lastworked" id="1yearago" value="1yearago" required>
             </div>
             
             <div class="question" >
                 <label for="manager"> 8. Manager Name (Optional) : </label>
                 <input class="answer" type="text" name ="manager" id="manager">
             </div>
+
             <div class="question"> 9. Rate your experience on following parameters : </div>
-                <div class="question"><li style="margin-left: 100px;"> Quality of work :
-                    <label style = "margin-left:20px;" for="good"> Good </label>
-                    <input type="radio" name ="worklifebalance" id="good" required>
-                    <label for="good"> Average </label>
-                    <input type="radio" name ="worklifebalance" id="average" required>
-                    <label for="good"> Bad </label>
-                    <input type="radio" name ="worklifebalance" id="good"required>
-                </li>
+            <div class="question"><li style="margin-left: 100px;">Quality of work:
+                <label style="margin-left:20px;" for="qualitygood">Good</label>
+                <input type="radio" name="workquality" id="qualitygood" value="Good" required>
+                <label for="qualityaverage">Average</label>
+                <input type="radio" name="workquality" id="qualityaverage" value="Average" required>
+                <label for="qualitybad">Bad</label>
+                <input type="radio" name="workquality" id="qualitybad" value="Bad" required>
+            </li></div>
+    
                 </div>
                 <div class="question"> <li style="margin-left: 100px;">Work life balance :
-                    <label style = "margin-left:20px;" for="good"> Good </label>
-                    <input type="radio" name ="worklifebalance" id="good" required>
-                    <label for="good"> Average </label>
-                    <input type="radio" name ="worklifebalance" id="average" required>
-                    <label for="good"> Bad </label>
-                    <input type="radio" name ="worklifebalance" id="good"required>
+                    <label style = "margin-left:20px;" for="wlbgood"> Good </label>
+                    <input type="radio" name ="worklifebalance" id="wlbgood" required>
+                    <label for="wlbaverage"> Average </label>
+                    <input type="radio" name ="worklifebalance" id="wlbaverage" required>
+                    <label for="wlbbad"> Bad </label>
+                    <input type="radio" name ="worklifebalance" id="wlbbad"required>
                 </li> 
                 </div>
                 <div class="question"> <li style="margin-left: 100px;"> Growth and learning :
-                    <label style = "margin-left:20px;" for="good"> Good </label>
-                    <input type="radio" name ="growth" id="good" required>
-                    <label for="good"> Average </label>
-                    <input type="radio" name ="growth" id="average" required>
-                    <label for="good"> Bad </label>
-                    <input type="radio" name ="growth" id="good" required>
+                    <label style = "margin-left:20px;" for="growthgood"> Good </label>
+                    <input type="radio" name ="growth" id="growthgood" required>
+                    <label for="growthaverage"> Average </label>
+                    <input type="radio" name ="growth" id="growthaverage" required>
+                    <label for="growthbad"> Bad </label>
+                    <input type="radio" name ="growth" id="growthbad" required>
                 </li>
                 </div>
                 <div class="question"> <li style="margin-left: 100px;"> Appraisal ratings :
-                    <label style = "margin-left:20px;" for="good"> Good </label>
-                    <input type="radio" name ="appraisal" id="good" required>
-                    <label for="good"> Average </label>
-                    <input type="radio" name ="appraisal" id="average" required>
-                    <label for="good"> Bad </label>
-                    <input type="radio" name ="appraisal" id="good" required>
+                    <label style = "margin-left:20px;" for="appraisalgood"> Good </label>
+                    <input type="radio" name ="appraisal" id="appraisalgood" required>
+                    <label for="appraisalaverage"> Average </label>
+                    <input type="radio" name ="appraisal" id="appraisalaverage" required>
+                    <label for="appraisalbad"> Bad </label>
+                    <input type="radio" name ="appraisal" id="appraisalbad" required>
                 </li>    
                 </div>
                 <div class="question"> <li style="margin-left: 100px;"> Experience with your manager :
-                    <label style = "margin-left:20px;" for="good"> Good </label>
-                    <input type="radio" name ="managerexp" id="good" required>
-                    <label for="good"> Average </label>
-                    <input type="radio" name ="managerexp" id="average" required>
-                    <label for="good"> Bad </label>
-                    <input type="radio" name ="managerexp" id="good" required>
+                    <label style = "margin-left:20px;" for="managerexpgood"> Good </label>
+                    <input type="radio" name ="managerexp" id="managerexpgood" required>
+                    <label for="managerexpaverage"> Average </label>
+                    <input type="radio" name ="managerexp" id="managerexpaverage" required>
+                    <label for="managerexpbad"> Bad </label>
+                    <input type="radio" name ="managerexp" id="managerexpbad" required>
                 </li>
                 </div>
                 <div class="question"> <li style="margin-left: 100px;"> Experience with your team :
-                    <label style = "margin-left:20px;" for="good"> Good </label>
-                    <input type="radio" name ="teamexp" id="good" required>
-                    <label for="good"> Average </label>
-                    <input type="radio" name ="teamexp" id="average" required>
-                    <label for="good"> Bad </label>
-                    <input type="radio" name ="teamexp" id="good" required>
+                    <label style = "margin-left:20px;" for="teamexpgood"> Good </label>
+                    <input type="radio" name ="teamexp" id="teamexpgood" required>
+                    <label for="teamexpaverage"> Average </label>
+                    <input type="radio" name ="teamexp" id="teamexpaverage" required>
+                    <label for="teamexpbad"> Bad </label>
+                    <input type="radio" name ="teamexp" id="teamexpbad" required>
                 </li>
                 </div>
                 <div class="question"> <li style="margin-left: 100px;"> Overall experience : 
-                    <label style = "margin-left:20px;" for="good"> Good </label>
-                    <input type="radio" name ="overallexp" id="good" required>
-                    <label for="good"> Average </label>
-                    <input type="radio" name ="overallexp" id="average" required>
-                    <label for="good"> Bad </label>
-                    <input type="radio" name ="overallexp" id="good" required>
+                    <label style = "margin-left:20px;" for="overallexpgood"> Good </label>
+                    <input type="radio" name ="overallexp" id="overallexpgood" required>
+                    <label for="overallexpaverage"> Average </label>
+                    <input type="radio" name ="overallexp" id="overallexpaverage" required>
+                    <label for="overallexpbad"> Bad </label>
+                    <input type="radio" name ="overallexp" id="overallexpbad" required>
                 </li>
                 </div>
             <div>
             <div class="question"> 10.  Did you experience any toxicity with your manager?
-                    <label style = "margin-left:20px;" for="yes"> Yes </label>
-                    <input type="radio" name ="managertoxicity" id="yes" required>
-                    <label for="no"> No</label>
-                    <input type="radio" name ="managertoxicity" id="no" required>
+                    <label style = "margin-left:20px;" for="managertoxicityyes"> Yes </label>
+                    <input type="radio" name ="managertoxicity" id="managertoxicityyes" required>
+                    <label for="managertoxicityno"> No</label>
+                    <input type="radio" name ="managertoxicity" id="managertoxicityno" required>
             </div>
             <div class="question"> 11. Did you experience any toxicity with your team?
-                <label style = "margin-left:20px;" for="yes"> Yes </label>
-                <input type="radio" name ="teamtoxicity" id="yes"required>
-                <label for="no"> No</label>
-                <input type="radio" name ="teamtoxicity" id="no" required>
+                <label style = "margin-left:20px;" for="teamtoxicityyes"> Yes </label>
+                <input type="radio" name ="teamtoxicity" id="teamtoxicityyes"required>
+                <label for="teamtoxicityno"> No</label>
+                <input type="radio" name ="teamtoxicity" id="teamtoxicityno" required>
             </div>
             <div class="question"> 12. Share your experience in details :
-                
-                <textarea class="answer" style="width:950px; height:80px; margin-left:30px; text-align:left;" maxlength=2500  name ="experiencedetails" id="experiencedetails" required> </textarea>
+                <textarea class="answer" style="width:950px; height:80px; margin-left:30px; text-align:left;" maxlength=2500  name ="expdetails" id="expdetails" required> </textarea>
             </div>
             <div class="question" >
                 <label for="email"> 13. Email ID (If you want to receive updates on your review) :</label>
                 <input class="answer" type="email" name ="email" id="email">
             </div>
-                <button class="bottom-button"> Submit my review </button>
+                <button class="bottom-button" type="submit"> Submit my review </button>
             </div>
         </form>
     </body>
